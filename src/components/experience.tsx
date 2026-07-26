@@ -93,20 +93,36 @@ export function Experience() {
                 {/* timeline dot */}
                 <span
                   aria-hidden="true"
-                  className="absolute top-1.5 -left-6 h-2.5 w-2.5 -translate-x-1/2 rounded-full border border-accent bg-background sm:-left-10"
+                  className={`absolute top-1.5 -left-6 h-2.5 w-2.5 -translate-x-1/2 rounded-full border border-accent sm:-left-10 ${
+                    entry.highlight ? "bg-accent" : "bg-background"
+                  }`}
                 />
                 <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1">
-                  <h3 className="text-lg font-semibold text-foreground">{entry.company}</h3>
+                  <h3
+                    className={`text-lg ${
+                      entry.highlight ? "font-bold text-gilded" : "font-semibold text-foreground"
+                    }`}
+                  >
+                    {entry.company}
+                  </h3>
                   {entry.badge && (
                     <span className="rounded-full border border-accent/40 px-2.5 py-0.5 font-mono text-[10px] uppercase tracking-[0.15em] text-accent">
                       {entry.badge}
                     </span>
                   )}
                 </div>
-                <p className="mt-1 text-sm text-muted">
+                <p
+                  className={`mt-1 text-sm ${
+                    entry.highlight ? "font-semibold text-gilded" : "text-muted"
+                  }`}
+                >
                   {entry.title} · {entry.location}
                 </p>
-                <p className="mt-1 font-mono text-xs uppercase tracking-[0.15em] text-muted/70">
+                <p
+                  className={`mt-1 font-mono text-xs uppercase tracking-[0.15em] ${
+                    entry.highlight ? "font-bold text-accent" : "text-muted/70"
+                  }`}
+                >
                   {entry.dates}
                 </p>
                 {entry.blurb && (

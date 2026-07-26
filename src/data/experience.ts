@@ -15,15 +15,24 @@ export type CareerEntry = {
   location: string;
   badge?: string;
   blurb?: string;
+  /** Gold emphasis for the primary / featured role. */
+  highlight?: boolean;
 };
 
 export const careerHistory: CareerEntry[] = [
+  {
+    company: "Mecka AI",
+    title: "Head of Atlas Capture · Lead, Finance & Operations",
+    dates: "October 2025 – Present",
+    location: siteConfig.location,
+    badge: "Current",
+    highlight: true,
+  },
   {
     company: "Keybox.ae",
     title: "Executive Director",
     dates: "July 2025 – Present",
     location: "Dubai, United Arab Emirates",
-    badge: "Current",
   },
   {
     company: "Heat and Cool Inc.",
@@ -74,7 +83,7 @@ export const experienceCategories: ExperienceCategory[] = [
     bullets: [
       "Own the contract lifecycle end-to-end — drafting, redlining, negotiation, execution, and amendments; ~80 active contract workstreams.",
       "Built the commercial contracting playbook from scratch for multi-jurisdiction vendor and partner agreements.",
-      "Negotiate against counterparty counsel across 10+ jurisdictions; instruct and manage outside counsel.",
+      "Negotiate commercial terms across the markets I've operated in — Jakarta, Manila, Ho Chi Minh City, Dubai, Istanbul, and New York.",
     ],
   },
   {
