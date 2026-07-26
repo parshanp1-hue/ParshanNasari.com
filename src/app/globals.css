@@ -1,26 +1,324 @@
 @import "tailwindcss";
 
+/*
+ * Palette — "Private Bank"
+ *   ink        #09090b  page background
+ *   char       #101014  raised surfaces / cards
+ *   bone       #f2f0ea  primary text
+ *   ash        #98948a  secondary text
+ *   gold       #c9a15a  primary accent
+ *   bronze     #8a6a34  deep accent (gradients)
+ *   ember      #e4c584  bright accent (highlights, gradient stops)
+ */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #09090b;
+  --foreground: #f2f0ea;
+  --card: #101014;
+  --card-raised: #16161b;
+  --border: rgba(242, 240, 234, 0.09);
+  --muted: #98948a;
+  --accent: #c9a15a;
+  --accent-deep: #8a6a34;
+  --accent-bright: #e4c584;
+  --accent-foreground: #09090b;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-raised: var(--card-raised);
+  --color-border: var(--border);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-deep: var(--accent-deep);
+  --color-accent-bright: var(--accent-bright);
+  --color-accent-foreground: var(--accent-foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-serif: var(--font-instrument-serif);
+  --font-quote: var(--font-newsreader);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  border-color: var(--border);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--accent-foreground);
+}
+
+/* ---------- keyframes ---------- */
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+    filter: blur(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes portrait-in {
+  from {
+    opacity: 0;
+    transform: scale(1.06);
+    filter: grayscale(1) contrast(1.05) blur(10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+    filter: grayscale(1) contrast(1.05) blur(0);
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes drift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(4%, -6%, 0) scale(1.08);
+  }
+}
+
+@keyframes ticker-pulse {
+  0%,
+  100% {
+    opacity: 0.55;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes line-grow {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+/* ---------- effect utilities ---------- */
+
+@layer utilities {
+  /* scroll-triggered reveal (toggled by IntersectionObserver) */
+  .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    filter: blur(4px);
+    transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+      filter 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+
+  /* hero entrance (plays on load, staggered via --rise-delay) */
+  .rise {
+    opacity: 0;
+    animation: rise 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation-delay: var(--rise-delay, 0ms);
+  }
+
+  .portrait-in {
+    animation: portrait-in 1.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+
+  /* serif italic accent for editorial headlines */
+  .font-display-italic {
+    font-family: var(--font-serif), Georgia, serif;
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+  }
+
+  /* pull-quote body — Newsreader, distinct from Instrument Serif display */
+  .font-quote {
+    font-family: var(--font-quote), Georgia, serif;
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: -0.015em;
+  }
+
+  /* gold gradient text */
+  .text-gilded {
+    background: linear-gradient(
+      100deg,
+      var(--accent-bright) 0%,
+      var(--accent) 45%,
+      var(--accent-deep) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* faint blueprint grid */
+  .bg-grid {
+    background-image: linear-gradient(rgba(242, 240, 234, 0.045) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(242, 240, 234, 0.045) 1px, transparent 1px);
+    background-size: 72px 72px;
+    mask-image: radial-gradient(ellipse 90% 80% at 50% 0%, black 30%, transparent 75%);
+  }
+
+  /* film grain overlay */
+  .bg-grain {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-size: 256px 256px;
+  }
+
+  /* floating glow orb */
+  .glow-orb {
+    border-radius: 9999px;
+    filter: blur(90px);
+    animation: drift 14s ease-in-out infinite;
+    will-change: transform;
+  }
+
+  /* infinite marquee track (content duplicated once in markup) */
+  .marquee-track {
+    display: flex;
+    width: max-content;
+    animation: marquee 36s linear infinite;
+  }
+
+  .marquee-mask {
+    mask-image: linear-gradient(90deg, transparent, black 12%, black 88%, transparent);
+  }
+
+  /* pointer-tracked interior glow (coords set by GlowCard) */
+  .glow-card {
+    position: relative;
+  }
+
+  .glow-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: radial-gradient(
+      260px circle at var(--mx, 50%) var(--my, 50%),
+      rgba(201, 161, 90, 0.1),
+      transparent 65%
+    );
+    opacity: 0;
+    transition: opacity 0.35s ease;
+    pointer-events: none;
+  }
+
+  .glow-card:hover::before {
+    opacity: 1;
+  }
+
+  /* let readers stop the ticker */
+  .marquee-mask:hover .marquee-track {
+    animation-play-state: paused;
+  }
+
+  /* giant ghost numeral behind sections */
+  .ghost-numeral {
+    pointer-events: none;
+    user-select: none;
+    position: absolute;
+    top: 1rem;
+    right: -0.5rem;
+    font-size: clamp(5rem, 28vw, 18rem);
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: -0.05em;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(242, 240, 234, 0.045);
+  }
+
+  @media (min-width: 640px) {
+    .ghost-numeral {
+      top: 2rem;
+      right: -1rem;
+    }
+  }
+
+  /* card sheen: gold border glow that follows on hover */
+  .card-lift {
+    transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+      border-color 0.4s ease, box-shadow 0.4s ease;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .card-lift:hover {
+      transform: translateY(-4px);
+      border-color: rgba(201, 161, 90, 0.45);
+      box-shadow: 0 20px 50px -24px rgba(201, 161, 90, 0.25),
+        0 0 0 1px rgba(201, 161, 90, 0.12) inset;
+    }
+  }
+
+  .hairline-grow {
+    transform-origin: left;
+    animation: line-grow 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation-delay: var(--rise-delay, 0ms);
+    transform: scaleX(0);
+  }
+
+  .status-dot {
+    animation: ticker-pulse 2.4s ease-in-out infinite;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-delay: 0ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .rise,
+  .reveal,
+  .hairline-grow {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+  }
+  .portrait-in {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: grayscale(1) contrast(1.05) !important;
+  }
 }
