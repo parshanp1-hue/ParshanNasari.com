@@ -44,9 +44,11 @@ export function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-5" noValidate>
+    <form onSubmit={handleSubmit} className="space-y-4" noValidate>
       {/* Honeypot field — hidden from real users, filters basic bots */}
       <input type="checkbox" name="botcheck" className="hidden" tabIndex={-1} autoComplete="off" />
+
+      <p className="text-sm leading-relaxed text-muted">Drop a note — I&apos;ll get back to you.</p>
 
       <div>
         <label htmlFor="name" className="block text-sm font-medium text-foreground">
@@ -58,7 +60,8 @@ export function ContactForm() {
           type="text"
           required
           autoComplete="name"
-          className="mt-2 min-h-11 w-full rounded-lg border border-border bg-background px-4 py-3 text-base text-foreground outline-none focus:border-accent"
+          placeholder="Your name"
+          className="mt-1.5 min-h-11 w-full rounded-lg border border-border bg-background px-4 py-3 text-base text-foreground outline-none placeholder:text-muted/60 focus:border-accent"
         />
       </div>
 
@@ -72,7 +75,8 @@ export function ContactForm() {
           type="email"
           required
           autoComplete="email"
-          className="mt-2 min-h-11 w-full rounded-lg border border-border bg-background px-4 py-3 text-base text-foreground outline-none focus:border-accent"
+          placeholder="you@example.com"
+          className="mt-1.5 min-h-11 w-full rounded-lg border border-border bg-background px-4 py-3 text-base text-foreground outline-none placeholder:text-muted/60 focus:border-accent"
         />
       </div>
 
@@ -84,8 +88,9 @@ export function ContactForm() {
           id="message"
           name="message"
           required
-          rows={5}
-          className="mt-2 w-full resize-none rounded-lg border border-border bg-background px-4 py-3 text-base text-foreground outline-none focus:border-accent"
+          rows={4}
+          placeholder="What would you like to talk about?"
+          className="mt-1.5 w-full resize-none rounded-lg border border-border bg-background px-4 py-3 text-base text-foreground outline-none placeholder:text-muted/60 focus:border-accent"
         />
       </div>
 
@@ -100,7 +105,7 @@ export function ContactForm() {
       <p role="status" aria-live="polite" className="text-sm">
         {status === "success" && <span className="text-accent">Thanks — your message is on its way.</span>}
         {status === "error" && (
-          <span className="text-red-400">Something went wrong. Please try the email link above instead.</span>
+          <span className="text-red-400">Something went wrong. Please try the email link instead.</span>
         )}
       </p>
     </form>

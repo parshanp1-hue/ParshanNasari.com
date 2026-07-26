@@ -1,4 +1,4 @@
-import { careerHistory, experienceCategories, roleHeader } from "@/data/experience";
+import { careerHistory, experienceCategories } from "@/data/experience";
 import { GlowCard } from "@/components/glow-card";
 import { Reveal } from "@/components/reveal";
 import { SectionHeading } from "@/components/section-heading";
@@ -23,29 +23,7 @@ export function Experience() {
           description="A functional breakdown of impact, grouped by domain rather than a single flat list of duties."
         />
 
-        <Reveal delayMs={80}>
-          <div className="card-lift mt-10 rounded-2xl border border-accent/25 bg-gradient-to-br from-card-raised to-card p-5 sm:mt-12 sm:p-8">
-            <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
-              <div className="min-w-0">
-                <h3 className="text-xl font-semibold text-foreground">{roleHeader.company}</h3>
-                <p className="mt-1.5 text-sm text-muted">{roleHeader.titles.join(" · ")}</p>
-              </div>
-              <p className="shrink-0 font-mono text-xs uppercase tracking-[0.15em] text-accent sm:text-right">
-                {roleHeader.dates}
-              </p>
-            </div>
-            <div className="mt-5 border-t border-border/60 pt-5">
-              <p className="text-sm text-foreground">
-                Based in <span className="text-accent">{roleHeader.location}</span>
-              </p>
-              <p className="mt-2 text-sm leading-relaxed text-muted">
-                Operating across {roleHeader.operatingIn.join(" · ")}
-              </p>
-            </div>
-          </div>
-        </Reveal>
-
-        <div className="mt-6 grid gap-4 sm:mt-8 sm:gap-6 sm:grid-cols-2">
+        <div className="mt-10 grid gap-4 sm:mt-12 sm:gap-6 sm:grid-cols-2">
           {experienceCategories.map((category, index) => (
             <Reveal key={category.title} delayMs={(index % 2) * 70}>
               <GlowCard className="card-lift group h-full rounded-2xl border border-border bg-card p-5 sm:p-7">

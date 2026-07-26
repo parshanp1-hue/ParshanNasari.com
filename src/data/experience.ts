@@ -1,13 +1,5 @@
 import { siteConfig } from "@/data/site";
 
-export const roleHeader = {
-  company: "Mecka AI",
-  titles: ["Head of Atlas Capture", "Lead, Finance & Operations"],
-  dates: "October 2025 – Present",
-  location: siteConfig.location,
-  operatingIn: siteConfig.operatingIn,
-};
-
 export type CareerEntry = {
   company: string;
   title: string;
