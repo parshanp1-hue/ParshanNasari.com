@@ -54,10 +54,9 @@ export const experienceCategories: ExperienceCategory[] = [
   {
     title: "Finance & Unit Economics",
     bullets: [
-      "Reduced cost per hour produced by 50%+, materially expanding EBITDA, through vendor rate renegotiation, payroll fraud remediation, entity and EOR restructuring, and facilities consolidation.",
-      "Own global payment infrastructure — batch payouts via Wise and crypto rails across 28+ countries.",
-      "Led reconciliation of $3.37M in uncategorized disbursements across two hot wallets.",
-      "Reviewed a $50M senior secured receivables revolver LOI — facility terms and counter-positions.",
+      "Reduced cost per hour produced by 50%+ through vendor renegotiation, workforce controls, entity and EOR restructuring, and facilities consolidation.",
+      "Own global payment infrastructure supporting batch payouts across 28+ countries.",
+      "Partner with leadership on financing strategy, diligence, and facility structuring.",
     ],
   },
   {
@@ -66,31 +65,30 @@ export const experienceCategories: ExperienceCategory[] = [
       "Functional ownership of a 650+ person workforce across 28+ countries; 8 direct reports at peak.",
       "Built the country-level org structure from zero — no inherited team or process.",
       "Own QA and workforce performance analytics, pace analysis, and output acceptance methodology.",
-      "Manage Deel as HRIS and contractor-of-record layer; own EOR relationships in markets without a local entity.",
-      "Source, diligence, and manage 60+ capture and labeling partners across Asia, LATAM, and Eastern Europe — holding the commercial line on rates, owning onboarding end-to-end, and converting pilots to production including a 100,000-hour program expansion.",
+      "Manage global HRIS and contractor-of-record layer; own EOR relationships in markets without a local entity.",
+      "Source, diligence, and manage 60+ capture and labeling partners across Asia, LATAM, and Eastern Europe — holding the commercial line on rates and converting pilots to production, including a 100,000-hour program expansion.",
     ],
   },
   {
     title: "Commercial Contracting",
     bullets: [
-      "Own the contract lifecycle end-to-end — drafting, redlining, negotiation, execution, amendments. Sole signatory for Atlas Capture; ~80 active contract workstreams.",
-      "Built the contracting playbook from scratch — governing law, arbitration seat, IP assignment, data and model-weight licensing, no auto-renewal.",
-      "Negotiate against counterparty in-house counsel across 10+ jurisdictions; instruct outside counsel including Latham & Watkins and Fangda Partners.",
+      "Own the contract lifecycle end-to-end — drafting, redlining, negotiation, execution, and amendments; ~80 active contract workstreams.",
+      "Built the commercial contracting playbook from scratch for multi-jurisdiction vendor and partner agreements.",
+      "Negotiate against counterparty counsel across 10+ jurisdictions; instruct and manage outside counsel.",
     ],
   },
   {
     title: "Regulatory & Compliance",
     bullets: [
-      "Own the multi-country DPIA program across all operating jurisdictions.",
+      "Own multi-country privacy and data-protection compliance across all operating jurisdictions.",
       "Direct compliance build-out for India's DPDP Act, PRC PIPL and cross-border transfer mechanisms, Vietnam's PDPL, the Philippines' DPA 10173, and Indonesia's PDP.",
-      "Own participant consent architecture — recorder consent, site-owner releases, notice scripts, app privacy terms.",
+      "Design and maintain participant consent and notice frameworks for capture operations.",
     ],
   },
   {
     title: "Corporate, Entity & Facilities",
     bullets: [
-      "Structured and stood up local operating entities across Indonesia, Vietnam, the Philippines, and China (WFOE).",
-      "Remediated parent-level operating agreement structure and ownership chain.",
+      "Structured and stood up local operating entities across Indonesia, Vietnam, the Philippines, and China.",
       "Manage registered agent, tax registration, and corporate filings.",
       "Negotiate commercial leases across Jakarta, Manila, and Ho Chi Minh City, plus ISP, data center, and logistics contracts.",
     ],
@@ -98,9 +96,9 @@ export const experienceCategories: ExperienceCategory[] = [
   {
     title: "Risk & Controls",
     bullets: [
-      "Detected and remediated a payroll fraud scheme — one inbox enrolled as ~49 separate workers — and built fraud-detection controls into payroll and QA analytics.",
-      "Authored the company security protocol — leadership comms policy, all-staff phishing advisory, cybersecurity training program.",
-      "Sole external spokesperson for Atlas Capture; manage labour-board proceedings and procedural filings.",
+      "Detected and remediated payroll fraud; built fraud-detection controls into payroll and QA analytics.",
+      "Authored company security protocol — leadership communications policy, phishing advisory, and cybersecurity training.",
+      "Serve as external spokesperson for Atlas Capture on operational and regulatory matters.",
     ],
   },
 ];

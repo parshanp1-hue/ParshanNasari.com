@@ -18,9 +18,9 @@ export function Experience() {
         <SectionHeading
           number="02"
           eyebrow="Experience"
-          heading="What I own,"
-          accent="day to day."
-          description="A functional breakdown of the role, grouped by domain rather than a single flat list of duties."
+          heading="What I bring"
+          accent="to the table."
+          description="A functional breakdown of impact, grouped by domain rather than a single flat list of duties."
         />
 
         <Reveal delayMs={80}>

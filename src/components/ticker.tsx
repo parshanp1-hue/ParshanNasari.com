@@ -2,10 +2,10 @@ const items = [
   "650+ global workforce",
   "28+ countries",
   "50%+ unit-cost reduction",
-  "$50M credit facility reviewed",
+  "60+ partners managed",
   "~80 contract workstreams",
   "100,000-hour program scaled",
-  "$3.37M disbursements reconciled",
+  "4 local entities stood up",
   "10+ jurisdictions negotiated",
 ];
 
