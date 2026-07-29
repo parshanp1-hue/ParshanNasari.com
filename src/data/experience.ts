@@ -95,6 +95,14 @@ export const experienceCategories: ExperienceCategory[] = [
     ],
   },
   {
+    title: "Sales & Compensation Design",
+    bullets: [
+      "Authored the sales playbooks from scratch — call scripts, qualification frameworks, and objection- and rejection-handling material used by the sales team.",
+      "Designed the compensation and commission structures for sales roles across all operating countries.",
+      "Laid out the payroll and compensation structure bases in every country, aligning local pay practices with a single global framework.",
+    ],
+  },
+  {
     title: "Risk & Controls",
     bullets: [
       "Detected and remediated payroll fraud; built fraud-detection controls into payroll and QA analytics.",
