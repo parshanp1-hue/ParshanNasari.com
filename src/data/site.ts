@@ -10,15 +10,8 @@ export const siteConfig = {
     "Finance & operations executive building the infrastructure behind large, distributed workforces.",
   /** Home base — where you're from / based. */
   location: "Toronto, Canada",
-  /** Markets where you actively run finance & operations. */
-  operatingIn: [
-    "Indonesia",
-    "Vietnam",
-    "Turkey",
-    "Dubai",
-    "United States",
-    "Philippines",
-  ],
+  /** Regions where you actively run finance & operations. */
+  operatingIn: ["Southeast Asia", "MENA", "North America"],
 
   // TODO: replace with your purchased domain once available.
   url: "https://parshannasari.com",
@@ -32,7 +25,7 @@ export const siteConfig = {
   seo: {
     title: "Parshan Nasari — Finance & Operations Executive",
     description:
-      "Parshan Nasari leads Atlas Capture, Mecka AI's data-collection subsidiary — a 650+ person distributed workforce across 28+ countries. Finance, operations, and commercial contracting leadership.",
+      "Parshan Nasari leads Atlas Capture, Mecka AI's data-collection subsidiary — a distributed workforce of hundreds across 25+ countries. Finance, operations, and commercial contracting leadership.",
     keywords: [
       "Parshan Nasari",
       "Finance Executive",

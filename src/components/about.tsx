@@ -32,7 +32,7 @@ export function About() {
                 &ldquo;
               </span>
               <p className="font-quote text-lg leading-relaxed text-foreground sm:text-2xl">
-                No inherited team. No inherited process. Built from zero — and run at half the cost.
+                No inherited team. No inherited process. Built from zero — and run at a fraction of the cost.
               </p>
             </blockquote>
           </Reveal>

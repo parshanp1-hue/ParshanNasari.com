@@ -81,7 +81,7 @@ export function Hero() {
             style={{ "--rise-delay": "420ms" } as React.CSSProperties}
           >
             I run the money, the contracts, and the operations behind a{" "}
-            <span className="text-foreground">650+ person workforce across 28+ countries</span> — as
+            <span className="text-foreground">workforce of hundreds across 25+ countries</span> — as
             Head of Atlas Capture and Lead of Finance &amp; Operations at Mecka AI.
           </p>
 

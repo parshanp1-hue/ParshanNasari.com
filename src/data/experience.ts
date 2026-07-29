@@ -55,43 +55,42 @@ export const experienceCategories: ExperienceCategory[] = [
   {
     title: "Finance & Unit Economics",
     bullets: [
-      "Reduced cost per hour produced by 50%+ through vendor renegotiation, workforce controls, entity and EOR restructuring, and facilities consolidation.",
-      "Own global payment infrastructure supporting batch payouts across 28+ countries.",
+      "Drove a double-digit percentage reduction in cost per hour produced through vendor renegotiation, workforce controls, entity and EOR restructuring, and facilities consolidation.",
+      "Own global payment infrastructure supporting batch payouts across 25+ countries.",
       "Partner with leadership on financing strategy, diligence, and facility structuring.",
     ],
   },
   {
     title: "Operations & Workforce",
     bullets: [
-      "Functional ownership of a 650+ person workforce across 28+ countries; 8 direct reports at peak.",
+      "Functional ownership of a workforce of several hundred across 25+ countries.",
       "Built the country-level org structure from zero — no inherited team or process.",
       "Own QA and workforce performance analytics, pace analysis, and output acceptance methodology.",
       "Manage global HRIS and contractor-of-record layer; own EOR relationships in markets without a local entity.",
-      "Source, diligence, and manage 60+ capture and labeling partners across Asia, LATAM, and Eastern Europe — holding the commercial line on rates and converting pilots to production, including a 100,000-hour program expansion.",
+      "Source, diligence, and manage dozens of capture and labeling partners across Asia, LATAM, and Eastern Europe — holding the commercial line on rates and converting pilots into six-figure-hour production programs.",
     ],
   },
   {
     title: "Commercial Contracting",
     bullets: [
-      "Own the contract lifecycle end-to-end — drafting, redlining, negotiation, execution, and amendments; ~80 active contract workstreams.",
+      "Own the contract lifecycle end-to-end — drafting, redlining, negotiation, execution, and amendments — across a high-volume portfolio of active workstreams.",
       "Built the commercial contracting playbook from scratch for multi-jurisdiction vendor and partner agreements.",
-      "Negotiate commercial terms across the markets I've operated in — Jakarta, Manila, Ho Chi Minh City, Dubai, Istanbul, and New York.",
+      "Negotiate commercial terms across Southeast Asia, MENA, and North America.",
     ],
   },
   {
     title: "Regulatory & Compliance",
     bullets: [
-      "Own multi-country privacy and data-protection compliance across all operating jurisdictions.",
-      "Direct compliance build-out for India's DPDP Act, PRC PIPL and cross-border transfer mechanisms, Vietnam's PDPL, the Philippines' DPA 10173, and Indonesia's PDP.",
+      "Own multi-country privacy and data-protection compliance, directing build-outs for country-specific regimes across every operating market.",
       "Design and maintain participant consent and notice frameworks for capture operations.",
     ],
   },
   {
     title: "Corporate, Entity & Facilities",
     bullets: [
-      "Structured and stood up local operating entities across Indonesia, Vietnam, the Philippines, and China.",
+      "Structured and stood up local operating entities across Southeast Asia.",
       "Manage registered agent, tax registration, and corporate filings.",
-      "Negotiate commercial leases across Jakarta, Manila, and Ho Chi Minh City, plus ISP, data center, and logistics contracts.",
+      "Negotiate commercial leases, ISP, data center, and logistics contracts across operating markets.",
     ],
   },
   {

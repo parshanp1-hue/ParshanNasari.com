@@ -1,11 +1,10 @@
 const items = [
-  "650+ global workforce",
-  "28+ countries",
-  "50%+ unit-cost reduction",
-  "60+ partners managed",
-  "~80 contract workstreams",
-  "100,000-hour program scaled",
-  "4 local entities stood up",
+  "Global workforce in the hundreds",
+  "25+ countries",
+  "Double-digit unit-cost reduction",
+  "Dozens of partners managed",
+  "Six-figure-hour programs scaled",
+  "Local entities across Southeast Asia",
   "10+ jurisdictions negotiated",
 ];
 
