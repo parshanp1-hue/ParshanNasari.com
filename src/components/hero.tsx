@@ -82,7 +82,7 @@ export function Hero() {
           >
             I run the money, the contracts, and the operations behind a{" "}
             <span className="text-foreground">workforce of hundreds across 25+ countries</span> — as
-            Head of Atlas Capture and Lead of Finance &amp; Operations at Mecka AI.
+            Lead of Finance &amp; Operations at Mecka AI.
           </p>
 
           <div

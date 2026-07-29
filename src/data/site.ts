@@ -5,7 +5,7 @@
  */
 export const siteConfig = {
   name: "Parshan Nasari",
-  role: "Head of Atlas Capture · Lead, Finance & Operations — Mecka AI",
+  role: "Lead, Finance & Operations — Mecka AI",
   tagline:
     "Finance & operations executive building the infrastructure behind large, distributed workforces.",
   /** Home base — where you're from / based. */
@@ -25,12 +25,11 @@ export const siteConfig = {
   seo: {
     title: "Parshan Nasari — Finance & Operations Executive",
     description:
-      "Parshan Nasari leads Atlas Capture, Mecka AI's data-collection subsidiary — a distributed workforce of hundreds across 25+ countries. Finance, operations, and commercial contracting leadership.",
+      "Parshan Nasari leads finance and operations at Mecka AI — a distributed workforce of hundreds across 25+ countries. Finance, operations, and commercial contracting leadership.",
     keywords: [
       "Parshan Nasari",
       "Finance Executive",
       "Operations Executive",
-      "Atlas Capture",
       "Mecka AI",
       "Commercial Contracting",
       "Workforce Operations",

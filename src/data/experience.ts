@@ -14,7 +14,7 @@ export type CareerEntry = {
 export const careerHistory: CareerEntry[] = [
   {
     company: "Mecka AI",
-    title: "Head of Atlas Capture · Lead, Finance & Operations",
+    title: "Lead, Finance & Operations",
     dates: "October 2025 – Present",
     location: siteConfig.location,
     badge: "Current",
@@ -106,7 +106,7 @@ export const experienceCategories: ExperienceCategory[] = [
     bullets: [
       "Detected and remediated payroll fraud; built fraud-detection controls into payroll and QA analytics.",
       "Authored company security protocol — leadership communications policy, phishing advisory, and cybersecurity training.",
-      "Serve as external spokesperson for Atlas Capture on operational and regulatory matters.",
+      "Serve as external spokesperson on operational and regulatory matters.",
     ],
   },
 ];
