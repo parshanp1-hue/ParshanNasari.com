@@ -1,38 +1,66 @@
 "use client";
 
-import { useState, type FormEvent } from "react";
+import { useEffect, useState, type FormEvent } from "react";
 
 type Status = "idle" | "submitting" | "success" | "error";
 
-const WEB3FORMS_ENDPOINT = "https://api.web3forms.com/submit";
+async function requestToken(): Promise<string | null> {
+  const response = await fetch("/api/contact/token", {
+    headers: { Accept: "application/json" },
+  });
+  const result = (await response.json()) as { ok?: boolean; token?: string };
+  return result.ok && result.token ? result.token : null;
+}
 
 export function ContactForm() {
   const [status, setStatus] = useState<Status>("idle");
-  const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_KEY;
+  const [token, setToken] = useState<string | null>(null);
+
+  useEffect(() => {
+    let cancelled = false;
+
+    requestToken()
+      .then((value) => {
+        if (!cancelled) setToken(value);
+      })
+      .catch(() => {
+        if (!cancelled) setToken(null);
+      });
+
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
-    if (!accessKey) {
-      setStatus("error");
-      return;
-    }
-
     const form = event.currentTarget;
     const formData = new FormData(form);
-    formData.append("access_key", accessKey);
 
     setStatus("submitting");
 
     try {
-      const response = await fetch(WEB3FORMS_ENDPOINT, {
-        method: "POST",
-        body: formData,
-        headers: { Accept: "application/json" },
-      });
-      const result = await response.json();
+      const submitToken = token ?? (await requestToken());
+      if (!submitToken) {
+        setStatus("error");
+        return;
+      }
 
-      if (result.success) {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          name: formData.get("name"),
+          email: formData.get("email"),
+          message: formData.get("message"),
+          botcheck: formData.get("botcheck"),
+          token: submitToken,
+        }),
+      });
+      const result = (await response.json()) as { ok?: boolean };
+
+      if (result.ok) {
         setStatus("success");
         form.reset();
       } else {
@@ -59,6 +87,7 @@ export function ContactForm() {
           name="name"
           type="text"
           required
+          maxLength={120}
           autoComplete="name"
           placeholder="Your name"
           className="mt-1.5 min-h-11 w-full rounded-lg border border-border bg-background px-4 py-3 text-base text-foreground outline-none placeholder:text-muted/60 focus:border-accent"
@@ -74,6 +103,7 @@ export function ContactForm() {
           name="email"
           type="email"
           required
+          maxLength={254}
           autoComplete="email"
           placeholder="you@example.com"
           className="mt-1.5 min-h-11 w-full rounded-lg border border-border bg-background px-4 py-3 text-base text-foreground outline-none placeholder:text-muted/60 focus:border-accent"
@@ -88,6 +118,7 @@ export function ContactForm() {
           id="message"
           name="message"
           required
+          maxLength={5000}
           rows={4}
           placeholder="What would you like to talk about?"
           className="mt-1.5 w-full resize-none rounded-lg border border-border bg-background px-4 py-3 text-base text-foreground outline-none placeholder:text-muted/60 focus:border-accent"

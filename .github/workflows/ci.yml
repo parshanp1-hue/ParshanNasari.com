@@ -12,6 +12,26 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Guard against committed secrets
+        run: |
+          set -euo pipefail
+          if git ls-files | grep -E '(^|/)\.env($|\.local$)|(^|/)id_rsa$|(^|/)credentials\.json$|service-account.*\.json$'; then
+            echo "Secret-like files are tracked in git."
+            exit 1
+          fi
+          if git grep -I -nE '(WEB3FORMS_KEY|SUPABASE_(SERVICE_ROLE|SECRET)|DATABASE_URL|PRIVATE_KEY)\s*=\s*\S+' \
+            -- ':!.env.local.example' ':!.env.example' ':!README.md'; then
+            echo "A populated secret assignment is tracked in git."
+            exit 1
+          fi
+
+      - name: Scan git history for secrets
+        run: |
+          curl -sSfL https://github.com/gitleaks/gitleaks/releases/download/v8.28.0/gitleaks_8.28.0_linux_x64.tar.gz | tar -xz gitleaks
+          ./gitleaks detect --source . --redact --exit-code 1
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
@@ -24,6 +44,9 @@ jobs:
 
       - name: Lint
         run: npm run lint
+
+      - name: Scan dependencies
+        run: npm audit --audit-level=high
 
       - name: Build
         run: npm run build
