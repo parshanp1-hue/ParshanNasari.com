@@ -23,7 +23,7 @@ export function Contact() {
                 eyebrow="Contact"
                 heading="Let's"
                 accent="talk."
-                description="Open to conversations about finance & operations leadership roles, advisory work, or partnerships."
+                description="I can step into finance & operations leadership, advisory work, or a partnership to stand this up."
               />
             </div>
 

@@ -1,11 +1,11 @@
 const items = [
-  "Global workforce in the hundreds",
-  "25+ countries",
-  "Double-digit unit-cost reduction",
-  "Dozens of partners managed",
-  "Six-figure-hour programs scaled",
-  "Local entities across Southeast Asia",
-  "10+ jurisdictions negotiated",
+  "Finance & operations I can own",
+  "Distributed workforces at scale",
+  "Multi-country entity build-outs",
+  "Unit-cost reduction",
+  "Commercial contracting",
+  "On-the-ground market launches",
+  "10+ jurisdictions I can negotiate",
 ];
 
 function TickerRun() {
@@ -28,7 +28,7 @@ function TickerRun() {
 export function Ticker() {
   return (
     <div
-      aria-label="Career highlights"
+      aria-label="What I can do"
       className="marquee-mask overflow-hidden border-b border-border/60 bg-card/40 py-5"
     >
       <div className="marquee-track">

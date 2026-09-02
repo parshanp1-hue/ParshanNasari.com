@@ -20,7 +20,7 @@ export function Experience() {
           eyebrow="Experience"
           heading="What I bring"
           accent="to the table."
-          description="A functional breakdown of impact, grouped by domain rather than a single flat list of duties."
+          description="The functions I can own, grouped by domain — finance, operations, contracting, and the on-the-ground build."
         />
 
         <div className="mt-10 grid gap-4 sm:mt-12 sm:gap-6 sm:grid-cols-2">

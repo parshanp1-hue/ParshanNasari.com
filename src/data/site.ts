@@ -7,7 +7,7 @@ export const siteConfig = {
   name: "Parshan Nasari",
   role: "Lead, Finance & Operations — Mecka AI",
   tagline:
-    "Finance & operations executive building the infrastructure behind large, distributed workforces.",
+    "I can build the finance and operations infrastructure behind large, distributed workforces.",
   /** Home base — where you're from / based. */
   location: "Toronto, Canada",
   /** Regions where you actively run finance & operations. */
@@ -25,7 +25,7 @@ export const siteConfig = {
   seo: {
     title: "Parshan Nasari — Finance & Operations Executive",
     description:
-      "Parshan Nasari leads finance and operations at Mecka AI — a distributed workforce of hundreds across 25+ countries. Finance, operations, and commercial contracting leadership.",
+      "Parshan Nasari can build finance and operations for distributed workforces — unit economics, commercial contracting, and on-the-ground market launches across 25+ countries.",
     keywords: [
       "Parshan Nasari",
       "Finance Executive",

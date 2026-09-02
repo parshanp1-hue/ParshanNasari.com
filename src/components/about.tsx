@@ -13,7 +13,7 @@ export function About() {
         <SectionHeading
           number="01"
           eyebrow="About"
-          heading="The financial and operational backbone of a"
+          heading="I can build the backbone of a"
           accent="global workforce."
         />
 
@@ -32,7 +32,7 @@ export function About() {
                 &ldquo;
               </span>
               <p className="font-quote text-lg leading-relaxed text-foreground sm:text-2xl">
-                No inherited team. No inherited process. Built from zero — and run at a fraction of the cost.
+                No inherited team required. I can build the process from zero — and run it lean.
               </p>
             </blockquote>
           </Reveal>

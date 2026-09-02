@@ -55,40 +55,40 @@ export const experienceCategories: ExperienceCategory[] = [
   {
     title: "Finance & Unit Economics",
     bullets: [
-      "Drove a double-digit percentage reduction in cost per hour produced through vendor renegotiation, workforce controls, entity and EOR restructuring, and facilities consolidation.",
-      "Own global payment infrastructure supporting batch payouts across 25+ countries.",
+      "Drive unit-cost down through vendor renegotiation, workforce controls, entity and EOR structuring, and facilities consolidation.",
+      "Build global payment infrastructure for batch payouts across 25+ countries.",
       "Partner with leadership on financing strategy, diligence, and facility structuring.",
     ],
   },
   {
     title: "Operations & Workforce",
     bullets: [
-      "Functional ownership of a workforce of several hundred across 25+ countries.",
-      "Built the country-level org structure from zero — no inherited team or process.",
+      "Own a distributed workforce of hundreds across 25+ countries.",
+      "Build the country-level org from zero — no inherited team or process required.",
       "Own QA and workforce performance analytics, pace analysis, and output acceptance methodology.",
-      "Manage global HRIS and contractor-of-record layer; own EOR relationships in markets without a local entity.",
-      "Source, diligence, and manage dozens of capture and labeling partners across Asia, LATAM, and Eastern Europe — holding the commercial line on rates and converting pilots into six-figure-hour production programs.",
+      "Put in place HRIS and contractor-of-record layers, including EOR in markets without a local entity.",
+      "Source, diligence, and manage dozens of capture and labeling partners — holding the commercial line on rates and converting pilots into six-figure-hour production.",
     ],
   },
   {
     title: "Commercial Contracting",
     bullets: [
-      "Own the contract lifecycle end-to-end — drafting, redlining, negotiation, execution, and amendments — across a high-volume portfolio of active workstreams.",
-      "Built the commercial contracting playbook from scratch for multi-jurisdiction vendor and partner agreements.",
+      "Own the contract lifecycle end-to-end — drafting, redlining, negotiation, execution, and amendments — across a high-volume portfolio.",
+      "Build the commercial contracting playbook for multi-jurisdiction vendor and partner agreements.",
       "Negotiate commercial terms across Southeast Asia, MENA, and North America.",
     ],
   },
   {
     title: "Regulatory & Compliance",
     bullets: [
-      "Own multi-country privacy and data-protection compliance, directing build-outs for country-specific regimes across every operating market.",
-      "Design and maintain participant consent and notice frameworks for capture operations.",
+      "Own multi-country privacy and data-protection compliance, directing build-outs for country-specific regimes.",
+      "Design participant consent and notice frameworks for capture operations.",
     ],
   },
   {
     title: "Corporate, Entity & Facilities",
     bullets: [
-      "Structured and stood up local operating entities across Southeast Asia.",
+      "Structure and stand up local operating entities across Southeast Asia.",
       "Manage registered agent, tax registration, and corporate filings.",
       "Negotiate commercial leases, ISP, data center, and logistics contracts across operating markets.",
     ],
@@ -96,16 +96,16 @@ export const experienceCategories: ExperienceCategory[] = [
   {
     title: "Sales & Compensation Design",
     bullets: [
-      "Authored the sales playbooks from scratch — call scripts, qualification frameworks, and objection- and rejection-handling material used by the sales team.",
-      "Designed the compensation and commission structures for sales roles across all operating countries.",
-      "Laid out the payroll and compensation structure bases in every country, aligning local pay practices with a single global framework.",
+      "Author sales playbooks from scratch — call scripts, qualification frameworks, and objection- and rejection-handling material.",
+      "Design compensation and commission structures for sales roles across operating countries.",
+      "Lay out payroll and compensation bases in each country, aligning local pay practices with a single global framework.",
     ],
   },
   {
     title: "Risk & Controls",
     bullets: [
-      "Detected and remediated payroll fraud; built fraud-detection controls into payroll and QA analytics.",
-      "Authored company security protocol — leadership communications policy, phishing advisory, and cybersecurity training.",
+      "Detect and remediate payroll fraud, and build fraud-detection controls into payroll and QA analytics.",
+      "Author company security protocol — leadership communications policy, phishing advisory, and cybersecurity training.",
       "Serve as external spokesperson on operational and regulatory matters.",
     ],
   },

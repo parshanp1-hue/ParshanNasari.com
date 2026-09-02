@@ -80,7 +80,7 @@ export function Hero() {
             className="rise mt-6 max-w-xl text-base leading-relaxed text-muted sm:mt-8 sm:text-lg"
             style={{ "--rise-delay": "420ms" } as React.CSSProperties}
           >
-            I build the finance and operations backbone behind a{" "}
+            I can build the finance and operations backbone for a{" "}
             <span className="text-foreground">workforce of hundreds across 25+ countries</span>.
           </p>
 
