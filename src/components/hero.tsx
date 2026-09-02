@@ -80,9 +80,8 @@ export function Hero() {
             className="rise mt-6 max-w-xl text-base leading-relaxed text-muted sm:mt-8 sm:text-lg"
             style={{ "--rise-delay": "420ms" } as React.CSSProperties}
           >
-            I run the money, the contracts, and the operations behind a{" "}
-            <span className="text-foreground">workforce of hundreds across 25+ countries</span> — as
-            Lead of Finance &amp; Operations at Mecka AI.
+            I build the finance and operations backbone behind a{" "}
+            <span className="text-foreground">workforce of hundreds across 25+ countries</span>.
           </p>
 
           <div
